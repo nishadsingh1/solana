@@ -16,6 +16,11 @@ import { pickCluster } from "utils/url";
 import Banner from "components/Banner";
 import SolanabeachComponents from "./components/SolanabeachComponents";
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faArrowUp, faArrowDown);
+
 function App() {
   return (
     <>
