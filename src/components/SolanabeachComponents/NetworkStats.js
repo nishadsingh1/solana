@@ -5,6 +5,7 @@ import NumberFormat from "react-number-format";
 import BlockHeight from "./BlockHeight";
 import LeaderWorldMap from "./LeaderWorldMap";
 import "moment-duration-format";
+import PerformanceHistory from "./PerformanceHistory";
 
 const moment = require("moment");
 const DROP = 1000000000;
@@ -253,7 +254,16 @@ export default class NetworkStats extends Component {
             <LeaderWorldMap socket={this.props.socket} />
           </Card>
         </div>
-
+        <PerformanceHistory socket={this.props.socket} />
+        <div className="hero-wrapper bg-composed-wrapper withOverflowingBackground">
+          <div className="card-header">
+            <div className="row align-items-center">
+              <div className="col">
+                <h4 className="card-header-title">SOL Statistics</h4>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="container p-0">
           <Card className="grey-card pl-0">
             <div className="card-indicator primary-blue-bg"></div>
