@@ -14,7 +14,7 @@ import TopAccountsCard from "components/TopAccountsCard";
 import SupplyCard from "components/SupplyCard";
 import { pickCluster } from "utils/url";
 import Banner from "components/Banner";
-import HomePageSplash from "./components/HomePageSplash";
+import SolanabeachComponents from "./components/SolanabeachComponents";
 
 function App() {
   return (
@@ -66,7 +66,7 @@ function App() {
           <Route exact path={TX_ALIASES.map((tx) => `/${tx}s`)}>
             <TabbedPage tab="Transactions">
               <TransactionsCard />
-              <HomePageSplash />
+              <SolanabeachComponents />
             </TabbedPage>
           </Route>
           <Route

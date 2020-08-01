@@ -2,8 +2,9 @@ import React, { Component, Fragment } from "react";
 import io from "socket.io-client";
 import NetworkStats from "./NetworkStats";
 import PerformanceHistory from "./PerformanceHistory";
+import { Cluster, useCluster } from "../../providers/cluster";
 
-export default class LandingPage extends Component {
+class LandingPageInner extends Component {
   constructor(props) {
     super(props);
 
@@ -42,3 +43,13 @@ export default class LandingPage extends Component {
     );
   }
 }
+
+function LandingPage() {
+  let cluster = useCluster();
+  if (cluster.cluster !== Cluster.MainnetBeta) {
+    return null;
+  }
+  return <LandingPageInner />;
+}
+
+export default LandingPage;

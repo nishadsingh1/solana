@@ -284,7 +284,6 @@ export default class PerformanceHistory extends Component {
     return (
       <div className>
         <Card className="grey-card">
-          <div className="card-indicator bg-orange"></div>
           <Row>
             <Col sm="12" md="4">
               <Row>
